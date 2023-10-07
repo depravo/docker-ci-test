@@ -26,11 +26,9 @@ jobs:
 
     - name: Deploy to Docker Hub
       run: |
-        docker login -e sorokaa6102@gmail.com -u depravo -p pWj(/T9+76bN-H2
         if [ "${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" = "master" ]; then
           TAG="latest"
         else
           TAG="${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
         fi
         docker build -f Dockerfile -t test:$TAG .
-        docker push ${{ github.repository }}
