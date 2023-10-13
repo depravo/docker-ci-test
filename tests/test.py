@@ -3,7 +3,7 @@ import json
 from flask import Flask
 from flask import jsonify
 
-import app  # Замените "your_app" на имя вашего файла приложения
+from app import app
 
 class AppTestCase(unittest.TestCase):
 
