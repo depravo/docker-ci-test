@@ -31,4 +31,4 @@ jobs:
         else
           TAG="${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
         fi
-        docker build -f Dockerfile -t test:$TAG .
+        docker build -f app/Dockerfile -t test:$TAG .
