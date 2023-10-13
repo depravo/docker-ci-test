@@ -83,7 +83,7 @@ def get_books():
 
 
 @app.route("/", methods=["GET"])
-def home() -> str:
+def home():
     """
     Home page 
     """
