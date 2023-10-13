@@ -23,6 +23,7 @@ jobs:
 
     - name: Run tests
       run: python -m pytest -v tests/test.py
+      id: test
 
     - name: Build docker
       run: |
@@ -31,4 +32,8 @@ jobs:
         else
           TAG="${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
         fi
-        docker build -f app/Dockerfile -t test:$TAG .
+        if [ ${{ steps.test.outcome }} == 'success' ]; then
+          docker build -f app/Dockerfile -t test:$TAG .
+        else
+          echo "Skipping Docker build due to test failure."
+        fi
