@@ -25,7 +25,7 @@ class AppTestCase(unittest.TestCase):
 
     def test_get_book_by_id(self):
         response = self.client.get('/api/v1/books?id=1')
-        self.assertEqual(response.status_code, 300)
+        self.assertEqual(response.status_code, 200)
         data = json.loads(response.data)
         self.assertIsInstance(data, list)
         self.assertEqual(len(data), 1)
