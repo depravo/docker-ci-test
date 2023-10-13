@@ -29,7 +29,7 @@ books = [
         "isbn": "9781491943533",
         "title": "Practical Modern JavaScript",
         "subtitle": "Dive into ES6 and the Future of JavaScript",
-        "author": "Nicolás Bevacqua",
+        "author": "Nicolas Bevacqua",
         "published": "2017-07-16T00:00:00.000Z",
         "publisher": "O'Reilly Media",
         "pages": 334,
