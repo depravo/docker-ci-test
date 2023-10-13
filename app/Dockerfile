@@ -12,7 +12,7 @@ WORKDIR /app
 COPY . /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip3 --no-cache-dir install -r requirements.txt
+RUN pip3 --no-cache-dir install -r app/requirements.txt
 
 # Run app.py when the container launches
 CMD ["python3", "app.py"]
